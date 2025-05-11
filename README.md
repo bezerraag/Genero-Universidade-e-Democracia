@@ -1,0 +1,1 @@
+Este projeto foi construído como parte da atividade avaliativa da disciplina Pesquisa Quantitativa, do curso de graduação em Ciências Sociais. Seu objetivo é aferir a correlação entre a identidade de gênero dos discentes de cursos de graduação do campus A. C. Simões da UFAL e o alinhamento ideológico com o modelo de democracia de Robert Dahl.

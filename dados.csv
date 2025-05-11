@@ -1,0 +1,134 @@
+Age,Gender,Race,Degree,Degree.start,Work,Q1,Q2,Q3,Q4,Q5,Q6,Q7
+37,Homem cisgênero,Branca,Ciências Sociais,2023.2,"Sim, trabalho e estudo",5,5,5,2,4,5,5
+20,Homem cisgênero,Branca,Ciências Sociais,2023.1,"Sim, trabalho e estudo",5,5,4,5,5,5,3
+20,Mulher cisgênero,Parda,Ciências Sociais,2023.1,"Não, apenas estudo",5,5,5,5,5,5,5
+21,Mulher cisgênero,Branca,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+22,Mulher cisgênero,Branca,Matemática ,2022.1,"Sim, trabalho e estudo",5,5,4,5,4,5,5
+22,Homem cisgênero,Parda,Engenharia de Energia,2022.1,"Não, apenas estudo",5,5,4,2,4,5,5
+21,Mulher cisgênero,Branca,Geografia,2022.2,"Não, apenas estudo",5,5,5,2,5,5,5
+20,Mulher cisgênero,Parda,Geografia,2022.2,"Não, apenas estudo",5,5,4,5,4,4,4
+25,Homem cisgênero,Parda,Geografia,2024.1,"Não, apenas estudo",5,5,5,4,5,4,4
+21,Mulher cisgênero,Parda,Pedagogia,2021.2,"Não, apenas estudo",5,4,5,4,4,5,4
+25,Mulher cisgênero,Parda,Pedagogia,2021.2,"Sim, trabalho e estudo",5,5,5,4,4,5,4
+26,Mulher cisgênero,Parda,Geografia,2022.1,"Não, apenas estudo",5,5,5,5,5,5,5
+22,Homem transgênero,Branca,Ciência Biológicas,2025.1,"Não, apenas estudo",5,5,5,5,5,5,5
+20,Homem cisgênero,Parda,Nutrição,2024.2,"Não, apenas estudo",5,5,4,4,4,4,4
+27,Homem cisgênero,Preta,Nutrição,2024.1,"Sim, trabalho e estudo",4,5,2,5,5,5,5
+20,Mulher cisgênero,Branca,Nutrição,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+20,Mulher cisgênero,Branca,Química,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+21,Homem cisgênero,Branca,Nutrição,2024.2,"Não, apenas estudo",5,5,5,5,3,4,5
+20,Mulher cisgênero,Parda,Ciências Sociais,2023.1,"Não, apenas estudo",5,5,5,5,5,5,5
+35,Mulher cisgênero,Preta,Geografia,2022.1,"Sim, trabalho e estudo",5,5,5,2,2,5,4
+22,Homem cisgênero,Branca,Jornalismo,2023.1,"Sim, trabalho e estudo",5,5,5,5,4,5,4
+21,Mulher cisgênero,Preta,Ciências Sociais,2022.2,"Não, apenas estudo",5,5,5,2,4,5,4
+24,Mulher cisgênero,Parda,Letras - Português,2020.1,"Não, apenas estudo",5,5,2,5,4,5,4
+27,Mulher cisgênero,Branca,Educação Física,2022.2,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+22,Mulher cisgênero,Branca,Ciências Sociais,2023.2,"Não, apenas estudo",5,5,4,4,4,5,5
+20,Mulher cisgênero,Branca,Ciência Biológicas,2024.2,"Não, apenas estudo",5,5,5,4,5,5,5
+19,Mulher cisgênero,Parda,Geografia,2023.1,"Não, apenas estudo",5,5,5,5,5,5,5
+23,Homem cisgênero,Branca,Geografia,2021.2,"Não, apenas estudo",5,5,5,5,5,4,5
+19,Homem transgênero,Branca,Ciência Biológicas,2025.1,"Não, apenas estudo",4,5,4,4,5,5,5
+22,Homem cisgênero,Branca,Ciências Sociais,2023.1,"Não, apenas estudo",4,5,5,2,2,4,5
+20,Mulher cisgênero,Parda,Ciências Sociais,2021.1,"Sim, trabalho e estudo",5,5,5,5,5,4,5
+19,Homem cisgênero,Parda,Relações Públicas ,2024.1,"Sim, trabalho e estudo",4,5,4,3,5,5,4
+21,Mulher cisgênero,Branca,Arquitetura e Urbanismo,2022.2,"Não, apenas estudo",5,5,5,4,4,5,5
+24,Mulher cisgênero,Parda,Nutrição,2021.1,"Não, apenas estudo",5,5,4,2,5,5,5
+44,Mulher cisgênero,Branca,Geografia,2024.2,"Não, apenas estudo",5,5,5,4,4,4,4
+22,Homem cisgênero,Branca,Ciências Sociais,2022.1,"Sim, trabalho e estudo",5,5,5,5,5,4,5
+19,Homem cisgênero,Parda,Geografia,2024.1,"Sim, trabalho e estudo",5,5,5,1,4,5,1
+19,Mulher cisgênero,Parda,Administração,2024.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+36,Homem cisgênero,Parda,Ciências Econômicas,2021.2,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+21,Homem cisgênero,Branca,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+22,Homem cisgênero,Parda,Psicologia,2021.1,"Não, apenas estudo",4,5,5,4,5,5,5
+21,Mulher cisgênero,Preta,Ciência Biológicas,2023.2,"Sim, trabalho e estudo",5,5,4,4,4,5,5
+21,Mulher cisgênero,Branca,Pedagogia,2022.1,"Não, apenas estudo",5,5,5,2,5,5,5
+22,Mulher cisgênero,Branca,Letras - Inglês,2022.1,"Não, apenas estudo",5,5,5,2,4,5,3
+21,Não-binário,Parda,Design,2022.2,"Sim, trabalho e estudo",5,5,5,4,5,5,4
+23,Homem cisgênero,Branca,Ciências Sociais,2021.1,"Não, apenas estudo",5,5,5,5,4,5,4
+24,Homem cisgênero,Parda,Administração,2021.1,"Sim, trabalho e estudo",5,4,5,5,5,5,5
+22,Homem cisgênero,Preta,Relações Públicas ,2024.2,"Sim, trabalho e estudo",5,5,5,2,5,5,5
+20,Mulher cisgênero,Parda,Ciências Sociais,2023.2,"Não, apenas estudo",5,5,5,4,4,4,5
+20,Mulher cisgênero,Preta,Pedagogia,2022.1,"Sim, trabalho e estudo",5,5,5,4,5,5,5
+20,Homem cisgênero,Parda,Jornalismo,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+44,Homem cisgênero,Parda,Ciências Sociais,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+26,Homem cisgênero,Branca,Ciências Sociais,2024.1,"Sim, trabalho e estudo",5,5,4,4,4,3,4
+21,Homem transgênero,Branca,Design,2021.2,"Não, apenas estudo",5,5,5,5,5,5,5
+23,Mulher cisgênero,Preta,Ciências Sociais,2023.1,"Sim, trabalho e estudo",5,5,5,4,5,5,5
+22,Mulher cisgênero,Preta,Relações Públicas ,2023.1,"Sim, trabalho e estudo",5,5,3,3,4,5,5
+23,Homem cisgênero,Branca,Ciências Sociais,2021.2,"Sim, trabalho e estudo",5,5,5,4,4,5,5
+28,Homem cisgênero,Branca,Ciências Sociais,2024.1,"Sim, trabalho e estudo",5,5,5,5,5,5,4
+19,Mulher cisgênero,Indígena,Ciências Sociais,2024.1,"Não, apenas estudo",5,5,5,5,5,5,5
+41,Homem cisgênero,Preta,Ciências Sociais,2018.1,"Sim, trabalho e estudo",5,5,4,5,5,5,5
+25,Homem cisgênero,Parda,Química,2021.1,"Não, apenas estudo",5,5,1,1,1,5,1
+30,Homem cisgênero,Branca,Ciências Sociais,2024.1,"Sim, trabalho e estudo",4,5,5,4,1,5,1
+21,Homem cisgênero,Branca,Nutrição,2024.1,"Sim, trabalho e estudo",5,5,5,1,5,5,5
+21,Homem transgênero,Branca,Ciências Sociais,2022.2,"Não, apenas estudo",5,4,5,4,5,4,5
+19,Pessoa agênero,Branca,Psicologia,2024.1,"Não, apenas estudo",5,5,5,4,5,5,4
+21,Homem cisgênero,Parda,Engenharia de Computação,2024.1,"Sim, trabalho e estudo",5,5,5,5,4,5,4
+27,Mulher cisgênero,Preta,Ciências Sociais,2018.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+23,Mulher cisgênero,Preta,Ciências Sociais,2024.1,"Não, apenas estudo",5,5,5,4,5,5,4
+19,Mulher cisgênero,Branca,Engenharia Química,2023.1,"Sim, trabalho e estudo",5,5,4,4,5,5,5
+23,Mulher cisgênero,Parda,Ciências Sociais,2022.2,"Não, apenas estudo",5,2,5,5,2,5,5
+20,Mulher cisgênero,Branca,Ciências Sociais,2022.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+22,Mulher cisgênero,Branca,Ciências Sociais,2022.1,"Não, apenas estudo",5,5,5,4,5,5,5
+23,Mulher cisgênero,Branca,Ciências Sociais,2020.2,"Sim, trabalho e estudo",5,5,5,4,4,4,4
+22,Mulher cisgênero,Parda,Ciências Sociais,2022.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+78,Homem cisgênero,Branca,Biblioteconomia,2020.1,"Não, apenas estudo",5,5,5,5,4,5,5
+20,Mulher cisgênero,Preta,Ciências Sociais,2024.2,"Sim, trabalho e estudo",4,5,5,5,4,5,3
+21,Mulher cisgênero,Branca,Enfermagem ,2022.2,"Não, apenas estudo",5,5,5,5,4,4,4
+23,Homem cisgênero,Branca,Ciências Sociais,2021.2,"Não, apenas estudo",5,5,5,4,5,5,5
+25,Mulher cisgênero,Branca,Ciências Sociais,2019.1,"Não, apenas estudo",5,5,5,4,4,3,4
+20,Mulher cisgênero,Preta,Ciências Sociais,2023.1,"Não, apenas estudo",5,5,5,5,5,5,5
+59,Homem cisgênero,Parda,Ciências Sociais,2021.2,"Não, apenas estudo",4,5,5,5,5,5,5
+23,Homem cisgênero,Parda,Nutrição,2024.2,"Não, apenas estudo",5,5,4,5,5,5,5
+22,Mulher cisgênero,Parda,Pedagogia,2022.1,"Sim, trabalho e estudo",5,5,4,5,5,5,5
+22,Mulher cisgênero,Branca,Engenharia Civil,2020.2,"Não, apenas estudo",1,1,1,1,2,1,1
+22,Mulher cisgênero,Parda,Engenharia Civil,2021.2,"Não, apenas estudo",5,5,5,4,4,5,5
+23,Homem cisgênero,Branca,Medicina,2023.2,"Não, apenas estudo",4,5,5,3,5,5,3
+19,Mulher cisgênero,Parda,Medicina,2024.1,"Não, apenas estudo",5,5,4,2,5,5,3
+21,Homem cisgênero,Parda,Ciência da Computação,2023.2,"Não, apenas estudo",3,2,4,1,2,3,2
+22,Mulher cisgênero,Branca,Biblioteconomia,2020.2,"Sim, trabalho e estudo",4,4,5,2,2,4,4
+39,Homem cisgênero,Branca,Mestrado em Informatica,2024.2,"Não, apenas estudo",5,5,4,3,5,5,5
+23,Homem cisgênero,Parda,Medicina,2024.1,"Não, apenas estudo",3,4,5,5,4,5,5
+22,Mulher cisgênero,Parda,Serviço Social,2021.1,"Sim, trabalho e estudo",5,5,5,4,5,4,5
+21,Mulher cisgênero,Parda,Pedagogia,2024.2,"Não, apenas estudo",5,5,5,4,5,5,4
+21,Mulher cisgênero,Parda,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,4,5
+24,Homem cisgênero,Parda,Engenharia de Computação,2022.2,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+20,Mulher cisgênero,Parda,Pedagogia,2022.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+20,Mulher cisgênero,Parda,Pedagogia,2022.1,"Não, apenas estudo",5,5,5,5,5,5,5
+23,Mulher cisgênero,Parda,Mestrado em Matemática,2024.2,"Não, apenas estudo",5,5,5,1,5,5,5
+25,Homem cisgênero,Parda,Mestrado em Matemática,2024.1,"Não, apenas estudo",4,5,4,5,5,5,5
+25,Homem cisgênero,Branca,Doutorado em Matemática,2012.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+20,Mulher cisgênero,Preta,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,4,5,5,5
+21,Mulher cisgênero,Preta,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,4,4,5,5
+22,Mulher cisgênero,Parda,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,4,4,5,5
+21,Mulher cisgênero,Preta,Pedagogia,2024.2,"Não, apenas estudo",5,5,2,5,5,5,5
+19,Mulher cisgênero,Parda,Pedagogia,2024.2,"Não, apenas estudo",5,5,5,5,3,5,5
+23,Mulher cisgênero,Parda,Pedagogia,2021.2,"Sim, trabalho e estudo",5,5,5,4,5,5,4
+20,Mulher cisgênero,Parda,Pedagogia,2023.1,"Sim, trabalho e estudo",5,5,5,4,5,5,5
+21,Mulher cisgênero,Parda,Pedagogia,2024.2,"Sim, trabalho e estudo",5,5,5,4,1,4,5
+22,Mulher cisgênero,Parda,Pedagogia,2022.2,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+24,Homem cisgênero,Branca,Doutorado em Linguística e Literatura,2023.1,"Não, apenas estudo",5,5,5,5,5,5,5
+25,Mulher cisgênero,Parda,Serviço Social,2020.1,"Não, apenas estudo",5,5,5,5,5,5,5
+25,Mulher cisgênero,Parda,Serviço Social,2024.1,"Não, apenas estudo",5,5,5,4,5,5,5
+25,Mulher cisgênero,Parda,Serviço Social,2020.2,"Sim, trabalho e estudo",5,5,4,5,4,5,2
+23,Mulher cisgênero,Branca,Letras - Inglês,2023.1,"Sim, trabalho e estudo",5,5,5,4,2,5,2
+24,Homem cisgênero,Preta,Ciências Sociais,2022.1,"Sim, trabalho e estudo",4,5,5,2,2,5,5
+34,Homem cisgênero,Preta,Serviço Social,2024.2,"Sim, trabalho e estudo",4,5,4,4,5,5,5
+29,Homem cisgênero,Branca,Mestrado em Serviço Social ,2024.2,"Não, apenas estudo",5,5,5,5,4,4,5
+46,Mulher cisgênero,Branca,Direito,2024.2,"Sim, trabalho e estudo",5,5,5,4,5,5,5
+19,Mulher cisgênero,Branca,Serviço Social,2023.1,"Não, apenas estudo",4,4,5,2,5,5,4
+22,Mulher cisgênero,Parda,Design,2022.1,"Não, apenas estudo",5,5,5,5,4,4,5
+36,Mulher cisgênero,Parda,Ciências Sociais,2023.1,"Sim, trabalho e estudo",5,5,5,4,4,5,5
+24,Mulher cisgênero,Parda,Design,2022.1,"Sim, trabalho e estudo",5,4,5,5,4,5,4
+23,Mulher cisgênero,Preta,Ciências Sociais,2023.2,"Sim, trabalho e estudo",5,5,4,4,4,3,4
+32,Mulher cisgênero,Parda,Direito,2020.1,"Não, apenas estudo",5,5,4,4,4,4,4
+38,Mulher cisgênero,Preta,Ciências Sociais,2024.2,"Sim, trabalho e estudo",5,5,5,4,5,5,5
+24,Homem cisgênero,Branca,Química,2024.1,"Sim, trabalho e estudo",4,5,2,1,5,5,3
+19,Mulher cisgênero,Branca,Geografia,2024.2,"Não, apenas estudo",5,5,5,1,5,5,5
+20,Mulher cisgênero,Parda,Pedagogia,2023.1,"Não, apenas estudo",5,5,5,4,4,5,5
+19,Mulher cisgênero,Preta,Design,2024.2,"Não, apenas estudo",3,3,5,4,5,5,4
+25,Homem cisgênero,Parda,Administração,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,4,5
+39,Homem cisgênero,Parda,Direito,2023.1,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+24,Mulher cisgênero,Parda,Psicologia,2021.2,"Sim, trabalho e estudo",5,5,5,5,5,5,5
+20,Mulher cisgênero,Preta,Ciências Sociais,2024.1,"Não, apenas estudo",5,5,5,5,5,5,5
