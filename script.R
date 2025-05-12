@@ -28,37 +28,38 @@ rm(l,Q)
 d$ICDR <- as.numeric(lapply(d[ , paste0("Q", 1:7)], function(x) ((mean(as.numeric(x)) - 1) / 4)))
 
 #Teste de normalidade e correções para o ICDR
-x <- d$ICDR #d$ICDR é a variável que vou corrigir, substitua pela sua
-l <- list(
-  og       = function(x) x, #Valor original
-  log10    = function(x) log10(x), #Correção no log10
-  sqrt     = function(x) sqrt(x), #Correção na raiz quadrada
-  exp      = function(x) exp(x), #Correção no exponencial
-  sqr      = function(x) x^2 #Correção na elevação ao quadrado
-)
-
-c <- data.frame(i = character(), y = numeric()) #Criação de data frame para o gráfico
-
-for (i in names(l)){
-  y <- l[[i]](x) #Aplica correção
-  p <- shapiro.test(y)$p.value #Executa o teste de Shapiro-Wilk
-  r <- ifelse(p >= 0.05, "Há normalidade", "Não há normalidade") #Checa se o p-valor obtido indica normalidade
-  cat(paste0("Correção: ", i, " | p-valor: ", round(p, 10), " | ", r, "\n\n")) #Retorna resultado organizado no console
+correct <- function (x) {
+  l <- list(
+    og       = function(x) x, #Valor original
+    log10    = function(x) log10(x), #Correção no log10
+    sqrt     = function(x) sqrt(x), #Correção na raiz quadrada
+    exp      = function(x) exp(x), #Correção no exponencial
+    sqr      = function(x) x^2 #Correção na elevação ao quadrado
+  )
   
-  c <- rbind(c, data.frame(i, y)) #Salva resultado no data frame
+  c <- data.frame(i = character(), y = numeric()) #Criação de data frame para o gráfico
+  
+  for (i in names(l)){
+    y <- l[[i]](x) #Aplica correção
+    p <- shapiro.test(y)$p.value #Executa o teste de Shapiro-Wilk
+    r <- ifelse(p >= 0.05, "Há normalidade", "Não há normalidade") #Checa se o p-valor obtido indica normalidade
+    cat(paste0("Correção: ", i, " | p-valor: ", round(p, 10), " | ", r, "\n\n")) #Retorna resultado organizado no console
+    
+    c <- rbind(c, data.frame(i, y)) #Salva resultado no data frame
+  }
+  
+  ggplot(c, aes(y)) + #Gráfico para visualizar resultados
+    geom_density() + #Curva de densidade
+    stat_function(fun = dnorm, arg = list(mean = mean(y)), color = "red", linetype = "dashed") + #Curva normal perfeita, com média igual a dos dados utilizados
+    facet_wrap(i ~ .) + #Faceta para mostrar os diferentes tipos de correção no mesmo gráfico
+    theme_minimal() + #Tema minimalista
+    labs(
+      x = "ICDR",
+      y = "density"
+    )
 }
 
-ggplot(c, aes(y)) + #Gráfico para visualizar resultados
-  geom_density() + #Curva de densidade
-  stat_function(fun = dnorm, arg = list(mean = mean(y)), color = "red", linetype = "dashed") + #Curva normal perfeita, com média igual a dos dados utilizados
-  facet_wrap(i ~ .) + #Faceta para mostrar os diferentes tipos de correção no mesmo gráfico
-  theme_minimal() + #Tema minimalista
-  labs(
-    x = "ICDR",
-    y = "density"
-  )
-
-rm(l, i, y, p, r, c) #Apagando variáveis
+correct(d$ICDR) #Aplicando correções
 
 #--------------------------------------------------
 #Testes
@@ -110,22 +111,18 @@ ggplot(d[d$Gender %in% c("Mulher cisgênero", "Homem cisgênero"),], aes(Degree.
   ) +
   theme_minimal() #Tema minimalista
 
-#Filtrando gêneros
-g <- c("Mulher cisgênero", "Homem cisgênero")
+#Média do Índice x Gênero
 l <- d %>%
-  filter(Gender %in% g) %>%
-  group_by(Degree) %>%
+  filter(Gender %in% c("Mulher cisgênero", "Homem cisgênero")) %>% #Filtrando gêneros
+  group_by(Degree) %>% #Agrupando por curso
   summarise(
     n_Gender = n_distinct(Gender),
-    n = n()
+    n = n() #Contabilizando gêneros
   ) %>%
-  filter(n_Gender >= 2, n >= 4) %>%
+  filter(n_Gender >= 2, n >= 4) %>% #Filtrando cursos que possuem um mínimo de observações pra cada gênero
   pull(Degree)
 
-df <- d[d$Degree %in% l & d$Gender %in% g,]
-
-#Média do Índice x Gênero
-df %>%
+d[d$Degree %in% l & d$Gender %in% c("Mulher cisgênero", "Homem cisgênero"),] %>%
   group_by(Gender) %>% #Agrupamento por gẽnero
   summarise(ICDR = mean(ICDR)) %>% #Cálculo da média por gênero
   ggplot() +
@@ -169,6 +166,6 @@ d %>%
   coord_polar("y") + #Cordenadas polares
   geom_text(aes(label = label), position = position_stack(vjust = .5), size = 4, color = "white") + #Texto descritivo
   labs(fill = "Curso") +
-  theme_void() #Temavazio
+  theme_void() #Tema vazio
 
-rm(l, g) #Apagando variáveis
+rm(l) #Apagando variáveis
