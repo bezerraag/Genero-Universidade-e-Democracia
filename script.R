@@ -70,12 +70,12 @@ d[d$Gender %in% c("Mulher cisgênero", "Homem cisgênero"),] %>%
 #Teste T para índice x trabalho
 t.test(ICDR ~ Work, data = d)
 
-#Teste de Wilcox para índice x gênero (exclui gêneros com poucos dados)
+#Teste de Wilcoxon para índice x gênero (exclui gêneros com poucos dados)
 d[d$Gender %in% c("Mulher cisgênero", "Homem cisgênero"),] %>%
   wilcox.test(ICDR ~ Gender, data = .)
 
 #Spearman para índice x gênero (exclui gêneros com poucos dados)
-ifelse(d$Gender == "Mulher cisgênero", 1, ifelse(d$Gender == "Homem cisgênero", 0, NA)) %>%
+ifelse(d$Gender == "Mulher cisgênero", 1, ifelse(d$Gender == "Homem cisgênero", 0, NA)) %>% #Trata os gêneros como dados quantitativos
   cor.test(d$ICDR, y = ., method = "spearman")
 
 #Spearman para índice x período
@@ -83,15 +83,15 @@ cor.test(d$ICDR, as.numeric(d$Degree.start), method = "spearman")
 
 #Anova para índice x curso
 l <- d %>%
-  group_by(Degree) %>%
+  group_by(Degree) %>% #Agrupando por curso
   summarise(
-    n = n()
+    n = n() #Contabilizando os cursos
   ) %>%
-  filter(n >= 3) %>%
-  pull(Degree)
+  filter(n >= 3) %>% #Filtrando cursos com 3 ou mais observações
+  pull(Degree) #Extração
 
-oneway.test(ICDR ~ Degree, d[d$Degree %in% l,])
-rm(l)
+oneway.test(ICDR ~ Degree, d[d$Degree %in% l,]) #Anova
+rm(l) #Apagando variáveis
 
 #Spearman para índice x idade
 cor.test(d$ICDR, d$Age, method = "spearman")
@@ -99,17 +99,18 @@ cor.test(d$ICDR, d$Age, method = "spearman")
 #--------------------------------------------------
 #Gráficos
 
-#Gráfico para índice x período com divisão de gênero
+#Índice x período com divisão de gênero
 ggplot(d[d$Gender %in% c("Mulher cisgênero", "Homem cisgênero"),], aes(Degree.start, ICDR)) +
-  geom_boxplot(outliers = F) +
-  geom_smooth(aes(group = Gender), se = F, color = "red", linetype = "dashed", alpha = .5) +
-  facet_grid(Gender ~ .) +
+  geom_boxplot(outliers = F) + #Boxplot
+  geom_smooth(aes(group = Gender), se = F, color = "red", linetype = "dashed", alpha = .5) + #Linha de tendência
+  facet_grid(Gender ~ .) + #Faceta de gênero
   labs(
     title = "Distribuição do ICDR pelos períodos, com divisão de gênero",
     x = "Período de ingresso"
   ) +
-  theme_minimal()
+  theme_minimal() #Tema minimalista
 
+#Filtrando gêneros
 g <- c("Mulher cisgênero", "Homem cisgênero")
 l <- d %>%
   filter(Gender %in% g) %>%
@@ -120,62 +121,54 @@ l <- d %>%
   ) %>%
   filter(n_Gender >= 2, n >= 4) %>%
   pull(Degree)
+
 df <- d[d$Degree %in% l & d$Gender %in% g,]
 
+#Média do Índice x Gênero
 df %>%
-  group_by(Gender) %>%
-  summarise(ICDR = mean(ICDR)) %>%
+  group_by(Gender) %>% #Agrupamento por gẽnero
+  summarise(ICDR = mean(ICDR)) %>% #Cálculo da média por gênero
   ggplot() +
   aes(reorder(Gender, ICDR), ICDR, fill = Gender) +
-  geom_col() +
-  geom_hline(yintercept = mean(d$ICDR), linetype = "dashed", color = "red") +
-  coord_cartesian(ylim = c(.87, .9)) +
+  geom_col() + #Colunas
+  geom_hline(yintercept = mean(d$ICDR), linetype = "dashed", color = "red") + #Linha horizontal para média geral
+  coord_cartesian(ylim = c(.87, .9)) + #Zoom no eixo y
   labs(
     title = "Média do ICDR por gênero",
     subtitle = "Ajustado no eixo y",
     x = "Gênero"
   ) +
-  guides(fill = F) +
-  theme_minimal()
+  guides(fill = F) + #Apagando legendas inúteis
+  theme_minimal() #Tema minimalista
 
+#Índice x Curso com divisão de gênero
 df %>%
-  group_by(Degree, Gender) %>%
-  summarise(ICDR = mean(ICDR)) %>%
+  group_by(Degree, Gender) %>% #Agrupamento por curso e gênero
+  summarise(ICDR = mean(ICDR)) %>% #Cálculo da média para cada gênero em cada curso
   ggplot() +
   aes(Gender, ICDR, color = Degree, group = Degree) +
-  geom_line(alpha = .7) +
-  geom_point(size = 3, alpha = .7) +
-  geom_hline(yintercept = mean(d$ICDR), linetype = "dashed", color = "red") +
+  geom_line() + #Linha para comparação entre observações
+  geom_point(size = 3) + #Ponto
+  geom_hline(yintercept = mean(d$ICDR), linetype = "dashed", color = "red") + #Linha horizontal com média geral
   labs(
     title = "Distribuição do ICDR por cursos, com divisão de gênero",
     color = "Curso",
     x = "Gênero") +
-  theme_minimal()
+  theme_minimal() #Tema minimalista
 
-rm(l)
-
+#Distribuição de respondentes por curso
 l <- d %>% count(Degree, sort = TRUE) %>%
-  top_n(5, n)
+  top_n(5, n) #Filtando cursos com mais respondentes
 d %>%
   filter(Degree %in% l$Degree) %>%
   count(Degree) %>%
-  mutate(prop = n / sum(n),
+  mutate(prop = n / sum(n), #Contabilizando % de respondentes do total
          label = paste0("(", round(prop * 100), "%)")) %>%
   ggplot(aes("", prop, fill = Degree)) +
-  geom_bar(stat = "identity", width = 1) +
-  coord_polar("y") +
-  geom_text(aes(label = label), position = position_stack(vjust = .5), size = 4, color = "white") +
+  geom_bar(stat = "identity", width = 1) + #Barras
+  coord_polar("y") + #Cordenadas polares
+  geom_text(aes(label = label), position = position_stack(vjust = .5), size = 4, color = "white") + #Texto descritivo
   labs(fill = "Curso") +
-  theme_void()
-rm(l)
+  theme_void() #Temavazio
 
-d %>%
-  count(Work) %>%
-  mutate(prop = n / sum(n),
-         label = paste0("(", round(prop * 100), "%)")) %>%
-  ggplot(aes("", prop, fill = Work)) +
-  geom_bar(stat = "identity", width = 1) +
-  coord_polar("y") +
-  geom_text(aes(label = label), position = position_stack(vjust = .5), size = 4, color = "white") +
-  labs(fill = "Trabalha?") +
-  theme_void()
+rm(l, g) #Apagando variáveis
